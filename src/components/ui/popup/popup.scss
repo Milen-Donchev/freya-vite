@@ -1,0 +1,10 @@
+@import "../../../styleguide/base.scss";
+
+.marketing-popup {
+  width: 16.25rem;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    height: 15rem;
+  }
+}

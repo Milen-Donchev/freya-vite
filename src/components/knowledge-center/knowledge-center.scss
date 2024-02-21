@@ -1,0 +1,7 @@
+@import "../../styleguide/base";
+
+.navigation-button {
+  &:hover {
+    background-color: $tertiary-200;
+  }
+}

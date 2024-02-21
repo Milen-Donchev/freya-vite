@@ -1,0 +1,140 @@
+//Form control
+.form-floating {
+  > label {
+    color: $form-floating-label-color;
+  }
+}
+.form-control:disabled {
+  ~ label {
+    color: $gray-300;
+  }
+}
+
+.form-check-input {
+  &:hover:not(:disabled) {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-btn-focus-box-shadow;
+  }
+  &:checked.is-invalid,
+  &:checked.is-valid {
+    background-color: $white;
+  }
+}
+
+.form-switch {
+  .form-check-input {
+    background-color: $form-switch-bg-color;
+    border-color: transparent;
+
+      &:hover {
+          border-color: transparent;
+          box-shadow: none;
+      }
+      &:checked {
+          background-color: $form-switch-bg-color-checked;
+      }
+  }
+}
+
+.valid-feedback,
+.invalid-feedback {
+  padding-left: 1rem;
+}
+.react-select-container {
+  .react-select__single-value {
+    overflow: visible !important;
+    text-overflow: clip;
+    white-space: normal;
+  }
+  &.invalid .react-select__control { border-color: $danger; }
+  &.large-multivalue .react-select__multi-value {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .react-select__control {
+    flex-wrap: nowrap;
+    padding: $form-select-padding-y $form-select-padding-x;
+    border: .063rem solid $input-border-color;
+    border-radius: 0.375rem;
+    outline: none !important;
+
+    &--is-focused {
+      border: .063rem solid $input-focus-border-color;
+    }
+    &:hover {
+      border: .063rem solid $input-border-color;
+    }
+  }
+  .react-select__indicator-separator {
+    display: none;
+  }
+  .react-select__input-container {
+    margin: 0;
+  }
+  .react-select__value-container { padding: 0; }
+  .react-select__multi-value,
+  .react-select__menu,
+  .react-select__menu-list {
+    border-radius: $border-radius;
+  }
+  .react-select__multi-value { overflow: hidden; }
+  .react-select__placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &.compact {
+    .react-select__control {
+      min-height: unset;
+      padding: .3rem 1rem;
+      border-radius: $btn-border-radius;
+    }
+  }
+
+  &.transparentSelect {
+    .react-select__control {
+      background-color: $primary-100;
+      border: none;
+      box-shadow: none;
+
+      @include transition(all 0.2s linear);
+
+      &--is-active {
+        border: none;
+        box-shadow: none;
+        background-color: $primary-300;
+      }
+
+      &:hover {
+        border: none;
+        background-color: $primary-200;
+      }
+
+      &--is-focused {
+        border: none;
+        box-shadow: none;
+      }
+
+      &--menu-is-opened {
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .react-select__menu {
+      border: none;
+
+      .react-select__menu-list,
+      .react-select__option {
+          &--is-selected {
+            border: none;
+            background-color: $primary;
+          }
+        }
+      }
+  }
+}
+
+.quill {
+  .ql-tooltip { display: none; }
+  .ql-container { font-size: 1rem; }
+}

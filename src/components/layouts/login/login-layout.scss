@@ -1,0 +1,10 @@
+@import "@styleguide/base";
+
+.login-logo {
+    max-width: 18.75rem;
+    max-height: 6rem;
+
+    @include media-breakpoint-down(md) {
+        max-height: 2.25rem;
+    }
+}

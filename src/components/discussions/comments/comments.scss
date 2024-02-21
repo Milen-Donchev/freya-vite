@@ -1,0 +1,53 @@
+@import "../../../styleguide/base.scss";
+
+.tertiary-comments-preview {
+  left: 1.25rem;
+}
+
+.comment-avatar {
+  grid-area: avatar;
+}
+
+.comment-input {
+  grid-area: input;
+}
+
+.comment-checkbox {
+  grid-area: checkbox;
+}
+
+.comment-submit {
+  grid-area: submit;
+}
+
+.comment-paperclip {
+  grid-area: paperclip;
+  justify-self: end;
+}
+
+.comment-input-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3.125rem max-content 1fr max-content;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "avatar input input input"
+    ". checkbox paperclip submit";
+  grid-gap: .75rem;
+  align-items: center;
+
+  @include media-breakpoint-down(md) {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "avatar . . ."
+      "input input input input"
+      "checkbox . paperclip submit";
+  }
+}
+
+.html-text {
+  p {
+    margin-bottom: 0;
+  }
+}

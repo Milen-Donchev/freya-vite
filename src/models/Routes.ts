@@ -1,0 +1,36 @@
+/**
+ * IMPORTANT: Keep the alphabetical order
+ */
+export enum Routes {
+  BASE_PROFILE = '/profile',
+  CONTACTS = '/contacts',
+  DASHBOARD = '/dashboard',
+  DISCUSSION = '/discussions/:id/:title',
+  DISCUSSIONS_LISTING = '/discussions',
+  EDIT_PROFILE = '/edit-profile',
+  FORGOTTEN_PASSWORD = '/otp',
+  HOME_PAGE = '/',
+  INDEX = '/',
+  INSTANT_CHECKOUT = '/instant-checkout',
+  KNOWLEDGE_CENTER_CATEGORIES = '/knowledge-center/:categoryId?/:categorySlug?',
+  KNOWLEDGE_CENTER_TOPICS = '/topics/:topicId/:topicSlug',
+  LOGIN = '/login',
+  LOGOUT = '/logout',
+  MEETINGS = '/meetings',
+  MEETING_DETAILS = '/meeting-details/:id',
+  MEETING_SAVE = '/meeting-save/:id',
+  NOTIFICATIONS = '/notifications',
+  PAYMENT_STATUS = '/payment-status',
+  PRODUCTS = '/products',
+  PROFILE = '/profile/:profileId/:profileSlug',
+  PROFILES_LISTING = '/profiles',
+  PROFILE_LISTING_SCHEDULES = '/profile-listing-schedules',
+  PROFILE_SCHEDULE = '/profile/:id/:slug/schedule',
+  REGISTER = '/register',
+  REGISTRATION_END_STEP = '/registration-end-step',
+  REGISTRATION_WIZARD = '/registration-wizard',
+  RESET_PASSWORD = '/reset-password',
+  SETTINGS = '/settings',
+  STYLEGUIDE = '/styleguide',
+  TERMS = '/terms'
+}

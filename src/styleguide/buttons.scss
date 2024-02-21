@@ -1,0 +1,57 @@
+.btn-xl {
+  @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-border-radius);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
+  padding: 0;
+  font-size: $btn-icon-font-size;
+  font-weight: inherit;
+  &.dropdown-toggle::after { display: none; }
+  @each $size, $size-value in $icon-button-sizes {
+    &.btn-#{$size} {
+      width: map-get($size-value, btn-size);
+      height: map-get($size-value, btn-size);
+      font-size: map-get($size-value, font-size);
+    }
+  } 
+}
+
+.btn {
+  box-shadow: none;
+  &.active:active { transform: none; }
+  &:active { transform: scale(.95, .95); }
+}
+
+.dropdown-toggle {
+  &:active,
+  &.active { transform: none; }
+  &.no-caret {
+    &:after { display: none; }
+  }
+}
+
+.btn-disabled {
+  &:disabled,
+  &[disabled] {
+    color: $btn-disabled-color;
+    background-color: $btn-disabled-bg-color;
+    border-color: $btn-disabled-bg-color;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-ghost-#{$color} {
+    @include button-ghost-variant($value);
+  }
+  .btn-#{$color} {
+    @extend .btn-disabled;
+  }
+  .btn-outline-#{$color} {
+    @include button-outline-custom-variant($value);
+  }
+}

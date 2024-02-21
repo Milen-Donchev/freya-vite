@@ -1,0 +1,16 @@
+@import "@styleguide/base";
+
+.registration-wizard-logo {
+    width: 100%;
+    max-width: 18.75rem;
+    max-height: 6rem;
+
+    @include media-breakpoint-down(md) {
+        max-height: 2.25rem;
+    }
+}
+
+.registration-content-width {
+    max-width: 51.25rem;
+    margin: 0 auto;
+}

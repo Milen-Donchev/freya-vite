@@ -1,0 +1,26 @@
+@import "@styleguide/base";
+
+.sidebar-base {
+  height: 100vh;
+  z-index: $zindex-fixed;
+}
+
+.sidebar-expanded {
+  min-width: 15rem;
+  width: 15rem;
+}
+
+.sidebar-collapsed {
+  min-width: 6.875rem;
+  width: 6.875rem;
+}
+
+.sidebar-logo {
+  height: 2.813rem;
+}
+
+.sidebar-navigation-button {
+  &:hover {
+    background-color: $tertiary-200;
+  }
+}

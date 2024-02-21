@@ -1,0 +1,65 @@
+.custom-scrollbar::-webkit-scrollbar {
+  width: .4rem;
+  height: .6rem;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &-thumb {
+    background-color: $primary-300;
+    border-radius: 1rem;
+  }
+  &-track {
+    background-color: transparent;
+  }
+}
+
+.smooth-transition {
+  @include transition(all 0.2s linear);
+}
+
+.editor-content img {
+  max-width: 100%;
+}
+
+iframe.ql-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/*Toast messages*/
+
+.Toastify__toast-container {
+  @include media-breakpoint-up(sm) {
+    width: 28rem;
+  }
+}
+
+.Toastify__toast {
+  padding: 0;
+  border-radius: $border-radius-lg;
+  box-shadow: none;
+  overflow: visible;
+  font-family: inherit;
+}
+
+.Toastify__toast-body {
+  padding: 0;
+}
+
+.Toastify__close-button {
+  display: none;
+}
+
+.scroll-margin-top {
+  scroll-margin-top: 6.25rem;
+}
+
+.react-datepicker {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 2px 2px 17px -7px rgba(0,0,0,0.75);
+}
+
+.react-datepicker .react-datepicker__header {
+  background-color: #FFF;
+}

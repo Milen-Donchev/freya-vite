@@ -1,0 +1,9 @@
+.video-wrapper {
+    padding-top: 56.25%; // player ratio (1280 / 720)
+  }
+  
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

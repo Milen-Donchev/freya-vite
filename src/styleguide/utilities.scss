@@ -1,0 +1,294 @@
+$utilities: map-remove($utilities, "h");
+$custom-utilities: (
+  "font-size": (
+    responsive: true,
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes
+  ),
+  "display": map-merge(map-get($utilities, "display"), ( responsive: true )),
+  "translate-middle": map-merge(map-get($utilities, "translate-middle"), ( responsive: true )),
+  "width": (
+    responsive: true,
+    property: width,
+    class: width,
+    values: (
+      1: .625rem,
+      2: 1.25rem,
+      3: 1.875rem,
+      4: 2.5rem,
+      5: 3.125rem,
+      6: 3.75rem,
+      7: 4.375rem,
+      8: 5rem,
+      9: 5.625rem,
+      10: 6.25rem,
+      12: 7.5rem,
+      16: 10rem,
+      24: 15rem,
+      25: 25%,
+      40: 40%,
+      50: 50%,
+      60: 60%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      320: 20rem,
+      auto: auto
+    )
+  ),
+  "max-width": (
+    responsive: true,
+    property: max-width,
+    class: mw,
+    values: (
+      25: 25%,
+      28: 17.5rem,
+      50: 50%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      320: 20rem,
+      450: 28rem,
+      auto: auto,
+      unset: unset,
+      max-content: max-content
+    )
+  ),
+  "height": (
+    responsive: true,
+    property: height,
+    class: height,
+    values: (
+      1: .625rem,
+      2: 1.25rem,
+      3: 1.875rem,
+      4: 2.5rem,
+      5: 3.125rem,
+      6: 3.75rem,
+      7: 4.375rem,
+      8: 5rem,
+      9: 5.625rem,
+      10: 6.25rem,
+      12: 7.5rem,
+      16: 10rem,
+      24: 15rem,
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "max-height": (
+    responsive: true,
+    property: max-height,
+    class: max-height,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto,
+      unset: unset,
+      100vh: 100vh
+    )
+  ),
+  "min-height": (
+    responsive: true,
+    property: min-height,
+    class: min-height,
+    values: (
+      1: .625rem,
+      2: 1.25rem,
+      3: 1.875rem,
+      4: 2.5rem,
+      5: 3.125rem,
+      6: 3.75rem,
+      7: 4.375rem,
+      8: 5rem,
+      9: 5.625rem,
+      10: 6.25rem,
+      12: 7.5rem,
+      16: 10rem,
+      24: 15rem,
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "top": (
+    responsive: true,
+    property: top,
+    class: top,
+    values: (
+      0: 0,
+      10: 10%,
+      15: 15%,
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      80: 80%,
+      85: 85%,
+      90: 90%,
+      100: 100%
+    )
+  ),
+  "position": map-merge(map-get($utilities, "position"), ( responsive: true )),
+  "bottom": map-merge(map-get($utilities, "bottom"), ( responsive: true )),
+  "start": map-merge(map-get($utilities, "start"), ( responsive: true )),
+  "end": map-merge(map-get($utilities, "end"), ( responsive: true )),
+  "text-transform": (
+    property: text-transform,
+    class: text,
+    values: lowercase uppercase capitalize none
+  ),
+  "white-space": (
+    property: white-space,
+    class: text,
+    values: (
+        wrap: normal,
+        nowrap: nowrap,
+        pre-wrap: pre-wrap
+    )
+  ),
+  "bg-opacity": (
+    css-var: true,
+    class: bg-opacity,
+    values: (
+      0: 0,
+      10: .1,
+      20: .2,
+      30: .3,
+      40: .4,
+      50: .5,
+      60: .6,
+      70: .7,
+      80: .8,
+      90: .9,
+      100: 1,
+    )
+  ),
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      10: .1,
+      20: .2,
+      25: .25,
+      30: .3,
+      40: .4,
+      50: .5,
+      60: .6,
+      70: .7,
+      75: .75,
+      80: .8,
+      90: .9,
+      100: 1,
+    )
+  ),
+  "cursor": (
+    property: cursor,
+    class: cursor,
+    values: (
+      pointer: pointer
+    )
+  ),
+  "rounded-top": (
+      responsive: true,
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-end": (
+      responsive: true,
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-bottom": (
+      responsive: true,
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "rounded-start": (
+      responsive: true,
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-sm),
+        2: var(--#{$prefix}border-radius),
+        3: var(--#{$prefix}border-radius-lg),
+        4: var(--#{$prefix}border-radius-xl),
+        5: var(--#{$prefix}border-radius-2xl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill)
+      )
+    ),
+    "object-fit": (
+      responsive: true,
+      property: object-fit,
+      values: (
+        contain: contain,
+        cover: cover,
+        fill: fill,
+        scale: scale-down,
+        none: none,
+      )
+    ),
+    "background-color": map-merge(map-get($utilities, "background-color") , (responsive: true)),
+    "border": map-merge(map-get($utilities, "border"),( responsive: true )),
+    "border-color": map-merge(map-get($utilities, "border-color"),( responsive: true )),
+    "min-viewport-height": map-merge(map-get($utilities, "min-viewport-height"),( responsive: true )),
+);
+
+$utilities: map-merge($utilities, $custom-utilities);

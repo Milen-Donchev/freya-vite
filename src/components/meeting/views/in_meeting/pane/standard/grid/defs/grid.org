@@ -1,0 +1,138 @@
+* 0, NO_BREAKPOINT, NO_SHARE
+
+|   | 1 | 2    | 3    | 4    | 5    | 6    | 7    | 8 |
+|---+---+------+------+------+------+------+------+---|
+| 1 | v | logo | logo | logo | logo | logo | logo | s |
+| 2 | v | sv   | sv   | sv   | sv   | sv   | sv   | s |
+| 3 | v | name | name | name | name | name | name | s |
+| 4 | v | name | name | name | name | name | name | s |
+| 5 | v | name | name | name | name | name | name | s |
+| 6 | v | vs   | vs   | vs   | vs   | vs   | vs   | s |
+
+* 0, MD_BREAKPOINT, NO_SHARE
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7 | 8 |
+|---+------+------+------+------+------+------+---+---|
+| 1 | logo | logo | sv   | sv   | sv   | sv   | s | s |
+| 2 | v    | v    | sv   | sv   | sv   | sv   | s | s |
+| 3 | v    | v    | name | name | name | name | s | s |
+| 4 | v    | v    | name | name | name | name | s | s |
+| 5 | v    | v    | vs   | vs   | vs   | vs   | s | s |
+| 6 | v    | v    | vs   | vs   | vs   | vs   | s | s |
+
+* 1, NO_BREAKPOINT, NO_SHARE
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+|---+------+------+------+------+------+------+------+------|
+| 1 | v    | logo | logo | logo | logo | logo | logo | s    |
+| 2 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 3 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 4 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 5 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 6 | vs   | name | name | name | name | name | name | sv   |
+
+* 1, MD_BREAKPOINT, NO_SHARE
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7 | 8 |
+|---+------+------+------+------+------+------+---+---|
+| 1 | logo | logo | sv   | sv   | sv   | sv   | s | s |
+| 2 | v    | v    | vt-1 | vt-1 | vt-1 | vt-1 | s | s |
+| 3 | v    | v    | vt-1 | vt-1 | vt-1 | vt-1 | s | s |
+| 4 | v    | v    | vt-1 | vt-1 | vt-1 | vt-1 | s | s |
+| 5 | v    | v    | vt-1 | vt-1 | vt-1 | vt-1 | s | s |
+| 6 | name | name | name | vs   | vs   | vs   | s | s |
+
+* 2, NO_BREAKPOINT, NO_SHARE
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+|---+------+------+------+------+------+------+------+------|
+| 1 | v    | logo | logo | logo | logo | logo | logo | s    |
+| 2 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 3 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 4 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 |
+| 5 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 |
+| 6 | vs   | name | name | name | name | name | name | sv   |
+
+* 2.md
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7 | 8 |
+|---+------+------+------+------+------+------+---+---|
+| 1 | logo | logo | sv   | sv   | sv   | sv   | s | s |
+| 2 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 3 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 4 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 5 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 6 | name | name | name | vs   | vs   | vs   | s | s |
+
+* 3
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+|---+------+------+------+------+------+------+------+------|
+| 1 | v    | logo | logo | logo | logo | logo | logo | s    |
+| 2 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 | vt-1 |
+| 3 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 | vt-2 |
+| 4 | vt-3 | vt-3 | vt-3 | vt-3 | vt-3 | vt-3 | vt-3 | vt-3 |
+| 5 | vs   | name | name | name | name | name | name | sv   |
+| 6 | vs   | name | name | name | name | name | name | sv   |
+
+* 3.md
+
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8 |
+|---+------+------+------+------+------+------+------+---|
+| 1 | logo | logo | sv   | sv   | sv   | sv   | sv   | s |
+| 2 | t    | vt-1 | vt-1 | vt-2 | vt-2 | vt-3 | vt-3 | s |
+| 3 | v    | vt-1 | vt-1 | vt-2 | vt-2 | vt-3 | vt-3 | s |
+| 4 | v    | vt-1 | vt-1 | vt-2 | vt-2 | vt-3 | vt-3 | s |
+| 5 | v    | vt-1 | vt-1 | vt-2 | vt-2 | vt-3 | vt-3 | s |
+| 6 | name | name | name | vs   | vs   | vs   | vs   | s |
+
+* 4
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+|---+------+------+------+------+------+------+------+------|
+| 1 | v    | logo | logo | logo | logo | logo | logo | s    |
+| 2 | vt-1 | vt-1 | vt-1 | vt-1 | vt-2 | vt-2 | vt-2 | vt-2 |
+| 3 | vt-1 | vt-1 | vt-1 | vt-1 | vt-2 | vt-2 | vt-2 | vt-2 |
+| 4 | vt-3 | vt-3 | vt-3 | vt-3 | vt-4 | vt-4 | vt-4 | vt-4 |
+| 5 | vt-3 | vt-3 | vt-3 | vt-3 | vt-4 | vt-4 | vt-4 | vt-4 |
+| 6 | vs   | name | name | name | name | name | name | sv   |
+
+* 4.md
+|   | 1    | 2    | 3    | 4    | 5    | 6    | 7 | 8 |
+|---+------+------+------+------+------+------+---+---|
+| 1 | logo | logo | sv   | sv   | sv   | sv   | s | s |
+| 2 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 3 | v    | v    | vt-1 | vt-1 | vt-2 | vt-2 | s | s |
+| 4 | v    | v    | vt-3 | vt-3 | vt-4 | vt-4 | s | s |
+| 5 | v    | v    | vt-3 | vt-3 | vt-4 | vt-4 | s | s |
+| 6 | name | name | name | vs   | vs   | vs   | s | s |
+
+* 1, NO_BREAKPOINT, SHARE
+|   | 1  | 2    | 3    | 4    | 5    | 6    | 7    | 8  |
+|---+----+------+------+------+------+------+------+----|
+| 1 | v  | logo | logo | logo | logo | logo | logo | s  |
+| 2 | sc | sc   | sc   | sc   | sc   | sc   | sc   | sc |
+| 3 | sc | sc   | sc   | sc   | sc   | sc   | sc   | sc |
+| 4 | sc | sc   | sc   | sc   | sc   | sc   | sc   | sc |
+| 5 | sc | sc   | sc   | sc   | sc   | sc   | sc   | sc |
+| 6 | vs | name | name | name | name | name | name | sv |
+
+* 1, MD_BREAKPOINT, SHARE
+
+|   | 1     | 2     | 3  | 4  | 5  | 6  | 7  | 8  |
+|---+-------+-------+----+----+----+----+----+----|
+| 1 | logo  | logo  | sc | sc | sc | sc | sc | sc |
+| 2 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 3 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 4 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 5 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 6 | name  | name  | sc | sc | sc | sc | sc | sc |
+
+* 2, MD_BREAKPOINT, SHARE
+
+|   | 1     | 2     | 3  | 4  | 5  | 6  | 7  | 8  |
+|---+-------+-------+----+----+----+----+----+----|
+| 1 | logo  | logo  | sc | sc | sc | sc | sc | sc |
+| 2 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 3 | svt-1 | svt-1 | sc | sc | sc | sc | sc | sc |
+| 4 | svt-2 | svt-2 | sc | sc | sc | sc | sc | sc |
+| 5 | svt-2 | svt-2 | sc | sc | sc | sc | sc | sc |
+| 6 | name  | name  | sc | sc | sc | sc | sc | sc |

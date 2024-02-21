@@ -1,0 +1,63 @@
+@mixin caret-down {
+  font-family: $font-awesome, sans-serif;
+  font-weight: 400;
+  margin-left: 0.625rem;
+  content: $caret-down;
+}
+
+@mixin caret-up {
+  font-family: $font-awesome, sans-serif;
+  font-weight: 400;
+  margin-left: 0.625rem;
+  content: $caret-up;
+}
+
+@mixin caret-end {
+  font-family: $font-awesome, sans-serif;
+  font-weight: 400;
+  margin-left: 0.625rem;
+  content: $caret-right;
+}
+
+@mixin caret-start {
+  font-family: $font-awesome, sans-serif;
+  font-weight: 400;
+  margin-left: 0.625rem;
+  content: $caret-left;
+}
+
+@mixin button-ghost-variant(
+  $color,
+  $color-hover: tint-color($color, 80%)
+) {
+  --#{$prefix}btn-color: #{$color};
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-hover-color: #{$color};
+  --#{$prefix}btn-hover-bg: #{$color-hover};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-focus-shadow-rgb: #{to-rgb($color)};
+  --#{$prefix}btn-active-color: #{$color};
+  --#{$prefix}btn-active-bg: #{$color-hover};
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-active-shadow: #{$btn-active-box-shadow};
+  --#{$prefix}btn-disabled-color: #{$btn-disabled-color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: transparent;
+  --#{$prefix}gradient: none;
+}
+
+@mixin button-outline-custom-variant(
+  $color,
+  $color-hover: $color,
+  $active-background: tint-color($color, 80%),
+  $active-border: $color,
+  $active-color: $color
+) {
+  --#{$prefix}btn-hover-color: #{$color-hover};
+  --#{$prefix}btn-hover-bg: #{$active-background};
+  --#{$prefix}btn-active-color: #{$active-color};
+  --#{$prefix}btn-active-bg: #{$active-background};
+  --#{$prefix}btn-disabled-color: #{$btn-disabled-color};
+  --#{$prefix}btn-disabled-bg: transparent;
+  --#{$prefix}btn-disabled-border-color: $btn-disabled-color;
+}

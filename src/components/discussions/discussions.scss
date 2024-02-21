@@ -1,0 +1,53 @@
+@import "../../styleguide/base.scss";
+
+.discussion-card-info-wrapper {
+  min-height: 15.625rem;
+}
+
+.discussion-description {
+  @include box-shadow(0 -1rem 0.5rem -0.875rem rgba($dark, .15));
+}
+
+.discussion-embedded-video-wrapper {
+  padding-top: 56.25%; // player ratio (1280 / 720)
+}
+
+.discussion-embedded-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.discussion-resource-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-row-gap: 1.25rem;
+  grid-auto-rows: auto;
+
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1.25rem;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 1.25rem;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-row-gap: 1.25rem;
+    grid-auto-rows: auto;
+  }
+}
+
+.discussion-resource-upload {
+  border: 0.125rem dashed $secondary-300;
+}
